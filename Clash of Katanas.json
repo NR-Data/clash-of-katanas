@@ -1,0 +1,2174 @@
+{
+  "gameSystem": {
+    "name": "Clash of Katanas",
+    "id": "4721-7945-0208-1507",
+    "authorContact": "Karter.Aurian@gmail.com",
+    "authorName": "Karter Aurian",
+    "battleScribeVersion": 2.03,
+    "readme": "Hope it all works\n\nHaven't figured out how to limit things like geisha's and assassins to 1 per army.\n\nIt doesn't check to see if you have enough civis for your milites+rare\nor if you have enough milites for your rares.\n\nHaven't added allies.\n\nFound a bug contact me.\nWhat army -> unit -> issue",
+    "revision": 9,
+    "type": "gameSystem",
+    "xmlns": "http://www.battlescribe.net/schema/gameSystemSchema",
+    "categoryEntries": [
+      {"name": "Iga warriors", "id": "2b85-e441-49d0-278e", "hidden": false, "page": 92, "publicationId": "2b66-a6af-f775-7e3a"},
+      {"name": "Otomo", "id": "4e6d-dd8e-3a37-4bcb", "hidden": false, "page": 72, "publicationId": "2b66-a6af-f775-7e3a"},
+      {"name": "Shimazu", "id": "1a08-f459-a1e6-b8ed", "hidden": false, "page": 70, "publicationId": "2b66-a6af-f775-7e3a"},
+      {"name": "Chosokabe", "id": "6968-97b8-bc7d-a7c6", "hidden": false, "page": 74, "publicationId": "2b66-a6af-f775-7e3a"},
+      {"name": "Mori", "id": "f8f8-691b-9a3c-e34b", "hidden": false, "page": 76, "publicationId": "2b66-a6af-f775-7e3a"},
+      {"name": "Oda/Tokugawa", "id": "4480-021a-ce5b-6e73", "hidden": false, "page": 78, "publicationId": "2b66-a6af-f775-7e3a"},
+      {"name": "Takeda", "id": "7d5b-a60d-87eb-792d", "hidden": false, "page": 80, "publicationId": "2b66-a6af-f775-7e3a"},
+      {"name": "Uesugi", "id": "e17d-3c6b-c085-7ffe", "hidden": false, "page": 82, "publicationId": "2b66-a6af-f775-7e3a"},
+      {"name": "Hojo", "id": "10b1-5423-9fac-54b5", "hidden": false, "page": 84, "publicationId": "2b66-a6af-f775-7e3a"},
+      {"name": "Date", "id": "f198-4f30-7166-94c1", "hidden": false, "page": 86, "publicationId": "2b66-a6af-f775-7e3a"},
+      {"name": "Ikko Ikki", "id": "fef9-fdfd-9f8e-a258", "hidden": false, "page": 90, "publicationId": "2b66-a6af-f775-7e3a"},
+      {"name": "Wako/Bandits", "id": "2f5e-92c6-adb0-749f", "hidden": false, "page": 94, "publicationId": "2b66-a6af-f775-7e3a"},
+      {"name": "Joseon Koreans", "id": "838a-cc16-6847-295f", "hidden": false, "page": 96, "publicationId": "2b66-a6af-f775-7e3a"},
+      {"name": "Ming Chinese", "id": "c7fa-04f7-3ee6-1c44", "hidden": false, "page": 98, "publicationId": "2b66-a6af-f775-7e3a"},
+      {"name": "Character", "id": "6124-b230-4f3a-c166", "hidden": false},
+      {"name": "Civis", "id": "6c02-5d82-97fc-1258", "hidden": false},
+      {"name": "Milites", "id": "a836-9302-4ef1-0e0b", "hidden": false},
+      {"name": "Rare", "id": "c506-322e-c5f6-630e", "hidden": false},
+      {"name": "Assassin", "id": "5242-09f5-a3f9-9301", "hidden": false},
+      {"name": "Warmachine", "id": "0e33-d5c8-5c32-e0d8", "hidden": false},
+      {"name": "Melee", "id": "c876-e1df-1054-409d", "hidden": false},
+      {"name": "Ranged", "id": "b96d-4daf-3387-6074", "hidden": false},
+      {"name": "Warband options", "id": "83b5-9c2a-edca-7ebe", "hidden": false},
+      {"name": "Toyotomi", "id": "58b1-1ceb-9d65-157b", "hidden": false, "page": 78, "publicationId": "2b66-a6af-f775-7e3a"}
+    ],
+    "costTypes": [{"name": "PTS", "id": "b6a6-2192-6add-77b0", "defaultCostLimit": -1, "hidden": false}],
+    "forceEntries": [
+      {
+        "name": "Ad-hoc",
+        "id": "703d-8cc0-344a-1e1f",
+        "comment": "Pick what you want, but try to avoid break tests!\n\nStart the battle with 1 Fate Point",
+        "hidden": false,
+        "page": 117,
+        "publicationId": "c456-f76c-b3d1-a04e",
+        "categoryLinks": [
+          {
+            "name": "Assassin",
+            "id": "e04f-4283-8d4b-ce18",
+            "hidden": false,
+            "primary": false,
+            "targetId": "5242-09f5-a3f9-9301",
+            "constraints": [
+              {
+                "id": "1058-f383-7490-5a7b",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "force",
+                "shared": true,
+                "type": "max",
+                "value": 1
+              }
+            ]
+          },
+          {"name": "Character", "id": "e912-ec01-0a3c-5bb5", "hidden": false, "primary": false, "targetId": "6124-b230-4f3a-c166"},
+          {"name": "Civis", "id": "865d-39e1-0638-5700", "hidden": false, "primary": false, "targetId": "6c02-5d82-97fc-1258"},
+          {"name": "Milites", "id": "9936-a3ec-740d-af0b", "hidden": false, "primary": false, "targetId": "a836-9302-4ef1-0e0b"},
+          {"name": "Rare", "id": "39e5-73c3-2c1c-db1b", "hidden": false, "primary": false, "targetId": "c506-322e-c5f6-630e"},
+          {"name": "Warband options", "id": "266a-3112-e8d9-dbf2", "hidden": false, "primary": false, "targetId": "83b5-9c2a-edca-7ebe"},
+          {"name": "Warmachine", "id": "b301-c386-60ed-cf2a", "hidden": false, "primary": false, "targetId": "0e33-d5c8-5c32-e0d8"}
+        ],
+        "forceEntries": [
+          {
+            "name": "Ad-hoc",
+            "id": "759e-8e9c-a7b2-5471",
+            "comment": "# of Civis models must be greater than or at least equal to the sum of # of Milites models # of Rare models.\n\n# of Rare models cannot axceed the # of Milites models.\n\nIgnore a break result the first time in the game that they are called to take a force break test. All other effects still apply (see force break test).\n\nStart the battle with 2 Fate Points.",
+            "hidden": false,
+            "categoryLinks": [
+              {"name": "Character", "id": "7797-5227-ddec-550f", "hidden": false, "primary": false, "targetId": "6124-b230-4f3a-c166"},
+              {"name": "Civis", "id": "5f83-58ee-a0f8-73ab", "hidden": false, "primary": false, "targetId": "6c02-5d82-97fc-1258"},
+              {"name": "Milites", "id": "01b1-e14e-9600-5438", "hidden": false, "primary": false, "targetId": "a836-9302-4ef1-0e0b"},
+              {"name": "Rare", "id": "7a4c-c58f-4145-ca50", "hidden": false, "primary": false, "targetId": "c506-322e-c5f6-630e"},
+              {"name": "Assassin", "id": "46ae-4a27-65bb-28e9", "hidden": false, "primary": false, "targetId": "5242-09f5-a3f9-9301"},
+              {"name": "Warmachine", "id": "0819-8395-8807-8578", "hidden": false, "primary": false, "targetId": "0e33-d5c8-5c32-e0d8"},
+              {"name": "Warband options", "id": "f811-465c-3115-296a", "hidden": false, "primary": false, "targetId": "83b5-9c2a-edca-7ebe"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Muster",
+        "id": "5daf-e388-e75e-95d5",
+        "comment": "# of Civis models must be greater than or at least equal to the sum of # of Milites models # of Rare models.\n\n# of Rare models cannot axceed the # of Milites models.\n\nIgnore a break result the first time in the game that they are called to take a force break test. All other effects still apply (see force break test).\n\nStart the battle with 2 Fate Points.",
+        "hidden": false,
+        "page": 116,
+        "publicationId": "c456-f76c-b3d1-a04e",
+        "categoryLinks": [
+          {
+            "name": "Character",
+            "id": "3132-7390-92a0-cd0f",
+            "hidden": false,
+            "primary": false,
+            "targetId": "6124-b230-4f3a-c166",
+            "constraints": [
+              {
+                "id": "db7a-18bb-8ad1-b54a",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "name": "Civis",
+            "id": "0941-cee1-72cd-8b59",
+            "hidden": false,
+            "primary": false,
+            "targetId": "6c02-5d82-97fc-1258",
+            "constraints": [
+              {
+                "id": "fe05-2ea0-b52d-f2c9",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "name": "Milites",
+            "id": "a6cb-fe86-5ed4-685b",
+            "hidden": false,
+            "primary": false,
+            "targetId": "a836-9302-4ef1-0e0b",
+            "constraints": [
+              {
+                "id": "d09c-61f4-0571-f923",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "name": "Rare",
+            "id": "e895-8a4d-b58f-ec05",
+            "hidden": false,
+            "primary": false,
+            "targetId": "c506-322e-c5f6-630e",
+            "constraints": [
+              {
+                "id": "4ced-ef21-9e7e-7f25",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "force",
+                "shared": true,
+                "type": "min",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "name": "Warmachine",
+            "id": "0eb1-b4f5-3e58-8b94",
+            "hidden": false,
+            "primary": false,
+            "targetId": "0e33-d5c8-5c32-e0d8",
+            "constraints": [
+              {
+                "id": "2324-2272-e216-51dd",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "force",
+                "shared": true,
+                "type": "min",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "name": "Warband options",
+            "id": "1a18-8e50-9684-fbe8",
+            "hidden": false,
+            "primary": false,
+            "targetId": "83b5-9c2a-edca-7ebe",
+            "constraints": [
+              {
+                "id": "9741-7607-15f7-efb7",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 0
+              }
+            ]
+          }
+        ],
+        "forceEntries": [
+          {
+            "name": "Muster",
+            "id": "baef-9c96-9738-5a71",
+            "comment": "# of Civis models must be greater than or at least equal to the sum of # of Milites models # of Rare models.\n\n# of Rare models cannot axceed the # of Milites models.\n\nIgnore a break result the first time in the game that they are called to take a force break test. All other effects still apply (see force break test).\n\nStart the battle with 2 Fate Points.",
+            "hidden": false,
+            "categoryLinks": [
+              {"name": "Character", "id": "6171-d239-424e-6a3f", "hidden": false, "primary": false, "targetId": "6124-b230-4f3a-c166"},
+              {"name": "Civis", "id": "38d6-142b-bca0-a97d", "hidden": false, "primary": false, "targetId": "6c02-5d82-97fc-1258"},
+              {"name": "Milites", "id": "8586-b340-2878-ff08", "hidden": false, "primary": false, "targetId": "a836-9302-4ef1-0e0b"},
+              {"name": "Rare", "id": "2ab1-5924-a794-ac95", "hidden": false, "primary": false, "targetId": "c506-322e-c5f6-630e"},
+              {"name": "Warmachine", "id": "8ea3-297b-ba32-7160", "hidden": false, "primary": false, "targetId": "0e33-d5c8-5c32-e0d8"},
+              {"name": "Warband options", "id": "2c65-a2ed-b923-064a", "hidden": false, "primary": false, "targetId": "83b5-9c2a-edca-7ebe"}
+            ]
+          }
+        ]
+      }
+    ],
+    "profileTypes": [
+      {
+        "name": "Milites",
+        "id": "247d-4cc3-afc8-3086",
+        "characteristicTypes": [
+          {"name": "TROOP TYPE", "id": "5128-bdb7-5a66-c1f1"},
+          {"name": "AVAIL.", "id": "5e80-6804-d17e-a7d9"},
+          {"name": "CBT", "id": "c1c3-d3e4-72fa-afd1"},
+          {"name": "RNG", "id": "e5f5-9646-3cee-75e7"},
+          {"name": "GRIT", "id": "1e40-d1e9-691b-5105"},
+          {"name": "SAVE", "id": "207c-cb8f-a014-6ca1"},
+          {"name": "WEAPONS", "id": "dea8-1e27-d36f-27cd"},
+          {"name": "ARMOR", "id": "e700-d44f-7a52-4531"},
+          {"name": "TRAITS", "id": "a3f7-8baa-78c9-8be4"},
+          {"name": "PTS", "id": "0318-49b2-fa2b-fe98"}
+        ]
+      },
+      {
+        "name": "Civis",
+        "id": "d31a-d021-74d9-2349",
+        "characteristicTypes": [
+          {"name": "TROOP TYPE", "id": "8486-8c22-481a-51f9"},
+          {"name": "AVAIL.", "id": "5bf8-5f95-e41c-bb9d"},
+          {"name": "CBT", "id": "0497-5901-f748-ccf9"},
+          {"name": "RNG", "id": "d458-aaaf-51eb-6f1d"},
+          {"name": "GRIT", "id": "fc6f-14f8-1920-f724"},
+          {"name": "SAVE", "id": "1d33-e539-6628-4e3c"},
+          {"name": "WEAPONS", "id": "dc9d-fc65-ecd7-f6b1"},
+          {"name": "ARMOR", "id": "3e8b-7655-dee2-e698"},
+          {"name": "TRAITS", "id": "e1ce-d7cb-4440-6044"},
+          {"name": "PTS", "id": "b828-2760-478f-afe3"}
+        ]
+      },
+      {
+        "name": "Rare",
+        "id": "90e4-72e5-f190-bcfe",
+        "characteristicTypes": [
+          {"name": "TROOP TYPE", "id": "d110-120c-c5fc-aa1b"},
+          {"name": "AVAIL.", "id": "e076-6e22-ff09-ccc0"},
+          {"name": "CBT", "id": "42fd-4fbc-7189-6109"},
+          {"name": "RNG", "id": "99d9-2cea-b28d-c5c5"},
+          {"name": "GRIT", "id": "22a5-ce9d-fe5a-552c"},
+          {"name": "SAVE", "id": "f2f3-e90c-c88c-22e7"},
+          {"name": "WEAPONS", "id": "909e-1b11-437a-de90"},
+          {"name": "ARMOR", "id": "8163-c237-a2d3-aa12"},
+          {"name": "TRAITS", "id": "9217-5e46-4833-fa3b"},
+          {"name": "PTS", "id": "6ec1-f669-6121-34c4"}
+        ]
+      },
+      {
+        "name": "Leader Samurai",
+        "id": "44fe-bc0f-3016-89bd",
+        "characteristicTypes": [
+          {"name": "CHARACTER", "id": "cbb5-3f64-f5d9-7604"},
+          {"name": "CBT", "id": "fb23-c4a3-34f3-332d"},
+          {"name": "RNG", "id": "340b-f0c2-3d50-d1fb"},
+          {"name": "GRIT", "id": "253a-6821-6354-5700"},
+          {"name": "CP", "id": "4ad2-6955-8bc1-ce21"},
+          {"name": "CR", "id": "d527-49f4-1615-d172"},
+          {"name": "SAVE", "id": "8976-e639-efc5-4af2"},
+          {"name": "EQUIPMENT", "id": "d497-a0eb-a304-c112"},
+          {"name": "TRAITS", "id": "f2f5-e890-e2df-efae"},
+          {"name": "PTS", "id": "d2bb-badc-e943-6397"}
+        ]
+      },
+      {
+        "name": "Leader Other",
+        "id": "dc2f-6d51-5296-2e3e",
+        "characteristicTypes": [
+          {"name": "CHARACTER", "id": "7bc7-dd00-3397-bddb"},
+          {"name": "CBT", "id": "7944-b4f6-3a62-2493"},
+          {"name": "RNG", "id": "61f3-85c3-5fbd-1336"},
+          {"name": "GRIT", "id": "918b-1ecd-340e-fa38"},
+          {"name": "CP", "id": "6805-cdf7-2fed-e1c9"},
+          {"name": "CR", "id": "a2f8-91f3-bd64-d8c4"},
+          {"name": "SAVE", "id": "78ea-c183-5913-5dc9"},
+          {"name": "EQUIPMENT", "id": "4cec-6c31-333d-e65e"},
+          {"name": "TRAITS", "id": "9af4-a9fa-f573-f1e5"},
+          {"name": "PTS", "id": "11c6-f54f-ab50-b986"}
+        ]
+      },
+      {"name": "Warband options", "id": "056e-b720-1c74-8ce4", "characteristicTypes": [{"name": "Rules", "id": "cebc-13a4-3975-e3d3"}]},
+      {
+        "name": "Shinobi",
+        "id": "e2e3-5cff-1f21-3fdd",
+        "characteristicTypes": [
+          {"name": "SHINOBI", "id": "bade-ccda-c82b-a58b"},
+          {"name": "CBT", "id": "8a85-4cc9-829f-1f7c"},
+          {"name": "RNG", "id": "fef5-780f-2d27-a7d9"},
+          {"name": "GRIT", "id": "b161-b207-6b91-e8ee"},
+          {"name": "SAVE", "id": "0a79-ad7d-3f3a-cd6c"},
+          {"name": "EQUIPMENT", "id": "a955-57c4-86f6-8ff9"},
+          {"name": "TRAITS", "id": "fad7-3dae-3a5c-a8ea"},
+          {"name": "PTS", "id": "3d91-9a30-75f8-dafc"}
+        ]
+      },
+      {
+        "name": "Melee Weapons",
+        "id": "dca2-054b-5a27-c598",
+        "characteristicTypes": [
+          {"name": "Weapon", "id": "db42-8f31-a03b-7cab"},
+          {"name": "Initiative", "id": "7036-dc17-324f-3679"},
+          {"name": "Save Mod", "id": "96e1-2b1f-4ace-7365"},
+          {"name": "Notes", "id": "c8a2-5e66-da06-7058"}
+        ]
+      },
+      {
+        "name": "Missile Weapons",
+        "id": "3b23-2b3e-2aa1-7894",
+        "characteristicTypes": [
+          {"name": "Missile Weapon", "id": "f27b-abc8-6cdc-6051"},
+          {"name": "Range (Close/Long)", "id": "3aaa-036d-a3bd-7c93"},
+          {"name": "Save Mod", "id": "6e5f-ed78-bd16-3f84"},
+          {"name": "Notes", "id": "e6a0-9cba-d6ab-891e"}
+        ]
+      },
+      {
+        "name": "Totals",
+        "id": "109e-4054-6d8f-d719",
+        "characteristicTypes": [
+          {"name": "Leaders", "id": "f6da-008f-1cbf-fe9b"},
+          {"name": "Civis", "id": "cb80-2e1c-df2f-427f"},
+          {"name": "Milites", "id": "ae00-327d-367a-9e65"},
+          {"name": "Rare", "id": "b0de-9dc3-d483-7e66"},
+          {"name": "Total", "id": "4ebe-c356-4c48-077b"},
+          {"name": "Break point every # of figures", "id": "bdbb-be9f-0134-c1cc"},
+          {"name": "Warband Type", "id": "9468-0b06-c396-434b"}
+        ]
+      }
+    ],
+    "publications": [
+      {
+        "name": "Clash of Katanas",
+        "id": "2b66-a6af-f775-7e3a",
+        "publicationDate": 2022,
+        "publisher": "Clash of Katanas",
+        "publisherUrl": "https://www.fightinghedgehog.com/",
+        "shortName": "CoK"
+      },
+      {
+        "name": "Clash of Spears",
+        "id": "c456-f76c-b3d1-a04e",
+        "publicationDate": 2019,
+        "publisher": "Clash of Spears",
+        "publisherUrl": "https://www.fightinghedgehog.com",
+        "shortName": "CoS"
+      }
+    ],
+    "sharedProfiles": [
+      {
+        "name": "Lvl 2 Veteran Warrior",
+        "id": "588c-7fae-6ecb-740a",
+        "hidden": false,
+        "page": 64,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "dc2f-6d51-5296-2e3e",
+        "typeName": "Leader Other",
+        "characteristics": [
+          {"name": "CHARACTER", "$text": "Lvl 2 Veteran Warrior", "typeId": "7bc7-dd00-3397-bddb"},
+          {"name": "CBT", "$text": "3+", "typeId": "7944-b4f6-3a62-2493"},
+          {"name": "RNG", "$text": "5+", "typeId": "61f3-85c3-5fbd-1336"},
+          {"name": "GRIT", "$text": "3", "typeId": "918b-1ecd-340e-fa38"},
+          {"name": "CP", "$text": "2+", "typeId": "6805-cdf7-2fed-e1c9"},
+          {"name": "CR", "$text": "8\"", "typeId": "a2f8-91f3-bd64-d8c4"},
+          {"name": "SAVE", "$text": "5+", "typeId": "78ea-c183-5913-5dc9"},
+          {"name": "EQUIPMENT", "$text": "Full Armor", "typeId": "4cec-6c31-333d-e65e"},
+          {"name": "TRAITS", "$text": "Wounds(2), Iron Will", "typeId": "9af4-a9fa-f573-f1e5"},
+          {"name": "PTS", "$text": "64", "typeId": "11c6-f54f-ab50-b986"}
+        ]
+      },
+      {
+        "name": "Lvl 2 Veteran Warrior(S)",
+        "id": "02a8-131b-b640-22fb",
+        "hidden": false,
+        "page": 63,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "44fe-bc0f-3016-89bd",
+        "typeName": "Leader Samurai",
+        "characteristics": [
+          {"name": "CHARACTER", "$text": "Lvl 2 Veteran Warrior", "typeId": "cbb5-3f64-f5d9-7604"},
+          {"name": "CBT", "$text": "3+", "typeId": "fb23-c4a3-34f3-332d"},
+          {"name": "RNG", "$text": "5+", "typeId": "340b-f0c2-3d50-d1fb"},
+          {"name": "GRIT", "$text": "3+", "typeId": "253a-6821-6354-5700"},
+          {"name": "CP", "$text": "2", "typeId": "4ad2-6955-8bc1-ce21"},
+          {"name": "CR", "$text": "8\"", "typeId": "d527-49f4-1615-d172"},
+          {"name": "SAVE", "$text": "4+", "typeId": "8976-e639-efc5-4af2"},
+          {"name": "EQUIPMENT", "$text": "Enclosed Armor", "typeId": "d497-a0eb-a304-c112"},
+          {"name": "TRAITS", "$text": "Wounds(2), Iron Will, Honorable,\nThe Old Ways", "typeId": "f2f5-e890-e2df-efae"},
+          {"name": "PTS", "$text": "68", "typeId": "d2bb-badc-e943-6397"}
+        ]
+      },
+      {
+        "name": "Lvl 4 Kumigashira",
+        "id": "2820-296c-c520-602b",
+        "hidden": false,
+        "page": 63,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "44fe-bc0f-3016-89bd",
+        "typeName": "Leader Samurai",
+        "characteristics": [
+          {"name": "CHARACTER", "$text": "Lvl 4 Kumigashira", "typeId": "cbb5-3f64-f5d9-7604"},
+          {"name": "CBT", "$text": "3+", "typeId": "fb23-c4a3-34f3-332d"},
+          {"name": "RNG", "$text": "5+", "typeId": "340b-f0c2-3d50-d1fb"},
+          {"name": "GRIT", "$text": "3+", "typeId": "253a-6821-6354-5700"},
+          {"name": "CP", "$text": "4", "typeId": "4ad2-6955-8bc1-ce21"},
+          {"name": "CR", "$text": "10\"", "typeId": "d527-49f4-1615-d172"},
+          {"name": "SAVE", "$text": "4+", "typeId": "8976-e639-efc5-4af2"},
+          {"name": "EQUIPMENT", "$text": "Enclosed Armor", "typeId": "d497-a0eb-a304-c112"},
+          {"name": "TRAITS", "$text": "Wounds(3), Attacks(2), Iron Will, Honorable,\nThe Old Ways", "typeId": "f2f5-e890-e2df-efae"},
+          {"name": "PTS", "$text": "128", "typeId": "d2bb-badc-e943-6397"}
+        ]
+      },
+      {
+        "name": "Lvl 3 Kogashira",
+        "id": "b677-9aec-02c7-989d",
+        "hidden": false,
+        "page": 63,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "44fe-bc0f-3016-89bd",
+        "typeName": "Leader Samurai",
+        "characteristics": [
+          {"name": "CHARACTER", "$text": "Lvl 3 Kogashira", "typeId": "cbb5-3f64-f5d9-7604"},
+          {"name": "CBT", "$text": "3+", "typeId": "fb23-c4a3-34f3-332d"},
+          {"name": "RNG", "$text": "5+", "typeId": "340b-f0c2-3d50-d1fb"},
+          {"name": "GRIT", "$text": "3+", "typeId": "253a-6821-6354-5700"},
+          {"name": "CP", "$text": "3", "typeId": "4ad2-6955-8bc1-ce21"},
+          {"name": "CR", "$text": "8\"", "typeId": "d527-49f4-1615-d172"},
+          {"name": "SAVE", "$text": "4+", "typeId": "8976-e639-efc5-4af2"},
+          {"name": "EQUIPMENT", "$text": "Enclosed Armor", "typeId": "d497-a0eb-a304-c112"},
+          {"name": "TRAITS", "$text": "Wounds(2), Attacks(2), Iron Will, Honorable,\nThe Old Ways", "typeId": "f2f5-e890-e2df-efae"},
+          {"name": "PTS", "$text": "98", "typeId": "d2bb-badc-e943-6397"}
+        ]
+      },
+      {
+        "name": "Lvl 5 Taisho",
+        "id": "e844-e04b-b3aa-2a3a",
+        "hidden": false,
+        "page": 63,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "44fe-bc0f-3016-89bd",
+        "typeName": "Leader Samurai",
+        "characteristics": [
+          {"name": "CHARACTER", "$text": "Lvl 5 Taisho", "typeId": "cbb5-3f64-f5d9-7604"},
+          {"name": "CBT", "$text": "3+", "typeId": "fb23-c4a3-34f3-332d"},
+          {"name": "RNG", "$text": "5+", "typeId": "340b-f0c2-3d50-d1fb"},
+          {"name": "GRIT", "$text": "3+", "typeId": "253a-6821-6354-5700"},
+          {"name": "CP", "$text": "5", "typeId": "4ad2-6955-8bc1-ce21"},
+          {"name": "CR", "$text": "10\"", "typeId": "d527-49f4-1615-d172"},
+          {"name": "SAVE", "$text": "4", "typeId": "8976-e639-efc5-4af2"},
+          {"name": "EQUIPMENT", "$text": "Enclosed Armor", "typeId": "d497-a0eb-a304-c112"},
+          {"name": "TRAITS", "$text": "Wounds(3), Attacks(3), Iron Will, Honorable,\nThe Old Ways", "typeId": "f2f5-e890-e2df-efae"},
+          {"name": "PTS", "$text": "158", "typeId": "d2bb-badc-e943-6397"}
+        ]
+      },
+      {
+        "name": "Lvl 5 Commander",
+        "id": "5230-cbff-ae72-5221",
+        "hidden": false,
+        "page": 64,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "dc2f-6d51-5296-2e3e",
+        "typeName": "Leader Other",
+        "characteristics": [
+          {"name": "CHARACTER", "$text": "Lvl 5 Commander", "typeId": "7bc7-dd00-3397-bddb"},
+          {"name": "CBT", "$text": "3+", "typeId": "7944-b4f6-3a62-2493"},
+          {"name": "RNG", "$text": "5+", "typeId": "61f3-85c3-5fbd-1336"},
+          {"name": "GRIT", "$text": "3+", "typeId": "918b-1ecd-340e-fa38"},
+          {"name": "CP", "$text": "5", "typeId": "6805-cdf7-2fed-e1c9"},
+          {"name": "CR", "$text": "10\"", "typeId": "a2f8-91f3-bd64-d8c4"},
+          {"name": "SAVE", "$text": "5+", "typeId": "78ea-c183-5913-5dc9"},
+          {"name": "EQUIPMENT", "$text": "Full Armor", "typeId": "4cec-6c31-333d-e65e"},
+          {"name": "TRAITS", "$text": "Wounds(3), Attacks(3), Iron Will", "typeId": "9af4-a9fa-f573-f1e5"},
+          {"name": "PTS", "$text": "154", "typeId": "11c6-f54f-ab50-b986"}
+        ]
+      },
+      {
+        "name": "Lvl 4 Officer",
+        "id": "6465-d689-8338-d52f",
+        "hidden": false,
+        "page": 64,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "dc2f-6d51-5296-2e3e",
+        "typeName": "Leader Other",
+        "characteristics": [
+          {"name": "CHARACTER", "$text": "Lvl 4 Officer", "typeId": "7bc7-dd00-3397-bddb"},
+          {"name": "CBT", "$text": "3+", "typeId": "7944-b4f6-3a62-2493"},
+          {"name": "RNG", "$text": "5+", "typeId": "61f3-85c3-5fbd-1336"},
+          {"name": "GRIT", "$text": "3+", "typeId": "918b-1ecd-340e-fa38"},
+          {"name": "CP", "$text": "4", "typeId": "6805-cdf7-2fed-e1c9"},
+          {"name": "CR", "$text": "10\"", "typeId": "a2f8-91f3-bd64-d8c4"},
+          {"name": "SAVE", "$text": "5+", "typeId": "78ea-c183-5913-5dc9"},
+          {"name": "EQUIPMENT", "$text": "Full Armor", "typeId": "4cec-6c31-333d-e65e"},
+          {"name": "TRAITS", "$text": "Wounds(3), Attacks(2), Iron Will", "typeId": "9af4-a9fa-f573-f1e5"},
+          {"name": "PTS", "$text": "124", "typeId": "11c6-f54f-ab50-b986"}
+        ]
+      },
+      {
+        "name": "Lvl 3 Captain",
+        "id": "0f38-24ed-a30d-04dd",
+        "hidden": false,
+        "page": 64,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "dc2f-6d51-5296-2e3e",
+        "typeName": "Leader Other",
+        "characteristics": [
+          {"name": "CHARACTER", "$text": "Lvl 3 Captain", "typeId": "7bc7-dd00-3397-bddb"},
+          {"name": "CBT", "$text": "3+", "typeId": "7944-b4f6-3a62-2493"},
+          {"name": "RNG", "$text": "5+", "typeId": "61f3-85c3-5fbd-1336"},
+          {"name": "GRIT", "$text": "3+", "typeId": "918b-1ecd-340e-fa38"},
+          {"name": "CP", "$text": "3", "typeId": "6805-cdf7-2fed-e1c9"},
+          {"name": "CR", "$text": "8\"", "typeId": "a2f8-91f3-bd64-d8c4"},
+          {"name": "SAVE", "$text": "5+", "typeId": "78ea-c183-5913-5dc9"},
+          {"name": "EQUIPMENT", "$text": "Full Armor", "typeId": "4cec-6c31-333d-e65e"},
+          {"name": "TRAITS", "$text": "Wounds(2), Attacks(2), Iron Will", "typeId": "9af4-a9fa-f573-f1e5"},
+          {"name": "PTS", "$text": "94", "typeId": "11c6-f54f-ab50-b986"}
+        ]
+      },
+      {
+        "name": "Master Assassin",
+        "id": "7a31-5c18-a0f6-924b",
+        "hidden": false,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "e2e3-5cff-1f21-3fdd",
+        "typeName": "Shinobi",
+        "characteristics": [
+          {"name": "SHINOBI", "$text": "Master Assassin", "typeId": "bade-ccda-c82b-a58b"},
+          {"name": "CBT", "$text": "3+", "typeId": "8a85-4cc9-829f-1f7c"},
+          {"name": "RNG", "$text": "5+", "typeId": "fef5-780f-2d27-a7d9"},
+          {"name": "GRIT", "$text": "3+", "typeId": "b161-b207-6b91-e8ee"},
+          {"name": "SAVE", "$text": "7+", "typeId": "0a79-ad7d-3f3a-cd6c"},
+          {"name": "EQUIPMENT", "$text": "Additional Hand Weapon", "typeId": "a955-57c4-86f6-8ff9"},
+          {"name": "TRAITS", "$text": "independent, yoji-gakure, deadly strike, off-hand parry, attacks(3) wounds(2)", "typeId": "fad7-3dae-3a5c-a8ea"},
+          {"name": "PTS", "$text": "89", "typeId": "3d91-9a30-75f8-dafc"}
+        ]
+      },
+      {
+        "name": "Assassin",
+        "id": "7849-aa91-e4ae-5861",
+        "hidden": false,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "e2e3-5cff-1f21-3fdd",
+        "typeName": "Shinobi",
+        "characteristics": [
+          {"name": "SHINOBI", "$text": "Assassin", "typeId": "bade-ccda-c82b-a58b"},
+          {"name": "CBT", "$text": "3+", "typeId": "8a85-4cc9-829f-1f7c"},
+          {"name": "RNG", "$text": "5+", "typeId": "fef5-780f-2d27-a7d9"},
+          {"name": "GRIT", "$text": "3+", "typeId": "b161-b207-6b91-e8ee"},
+          {"name": "SAVE", "$text": "7+", "typeId": "0a79-ad7d-3f3a-cd6c"},
+          {"name": "EQUIPMENT", "$text": "Additional Hand Weapon", "typeId": "a955-57c4-86f6-8ff9"},
+          {"name": "TRAITS", "$text": "independent, yoji-gakure, deadly strike, off-hand parry, attacks(2)", "typeId": "fad7-3dae-3a5c-a8ea"},
+          {"name": "PTS", "$text": "59", "typeId": "3d91-9a30-75f8-dafc"}
+        ]
+      },
+      {
+        "name": "Geisha",
+        "id": "2ffc-9087-ab16-0260",
+        "hidden": false,
+        "page": 65,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "056e-b720-1c74-8ce4",
+        "typeName": "Warband options",
+        "characteristics": [
+          {
+            "name": "Rules",
+            "$text": "If the army list allows it, you may include up to one Geisha in your force. If your force has a Geisha, you’ll be able to perform the Tea Ceremony at the start of the battle. If you have a painted model to place on the side of the table you can purchase a Geisha for 15 pts, if you don’t you may still purchase a Geisha, but it will cost you 20 pts.\nFind the tea ceremony on page 12 of Clash of Katanas",
+            "typeId": "cebc-13a4-3975-e3d3"
+          }
+        ]
+      },
+      {
+        "name": "Musicians",
+        "id": "4aca-ff26-6406-e6b3",
+        "hidden": false,
+        "page": 65,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "056e-b720-1c74-8ce4",
+        "typeName": "Warband options",
+        "characteristics": [
+          {
+            "name": "Rules",
+            "$text": "You can attach a musician to one of your characters, the musician will use a drum (Taiko) or the Conch Shell (Horagai). The model remains in base-to-base contact with the character and extend the command range to 16” but only to activate units. When checking command range to attempt a reaction use the command range of the character ignoring the effect of the musician. \n The musician is never targeted, nor can they fight, and is removed if the character model is eliminated from the game without any additional effect.",
+            "typeId": "cebc-13a4-3975-e3d3"
+          }
+        ]
+      },
+      {
+        "name": "Portable Buddhist Shrine",
+        "id": "de94-ae72-05b2-2c1f",
+        "hidden": false,
+        "page": 65,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "056e-b720-1c74-8ce4",
+        "typeName": "Warband options",
+        "characteristics": [
+          {
+            "name": "Rules",
+            "$text": "If the army list allows it, you may purchase a portable shrine or a large banner with a Goishun (handwritten shrine seal). The shrine was brought to war to unnerve the enemy soldiers who knew that it was considered blasphemy to engage in violence in the presence of the shrine, unless of course you were a member of the Ikko Ikki.\n The shrine model must be placed within 6” of your table edge. If your force includes a portable shrine you may re-roll the result when attempting\nthe Nembutsu Chants. \n If an enemy model ends up in base-to-base contact with the shrine, remove the shrine from the table. This has no effect on the game as at that point the fate will be determined in the battlefield and not in the spiritual world.",
+            "typeId": "cebc-13a4-3975-e3d3"
+          }
+        ]
+      },
+      {
+        "name": "Soothsayer",
+        "id": "499c-4ad0-5681-3a72",
+        "hidden": false,
+        "page": 66,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "056e-b720-1c74-8ce4",
+        "typeName": "Warband options",
+        "characteristics": [
+          {
+            "name": "Rules",
+            "$text": "If the army list allows it, you may purchase a soothsayer for your force. If your force includes a Soothsayer you may re-roll the result of consulting the omens before the battle.\n The Soothsayer never joins the battle remaining in the rear ranks with the support staff. If you have a painted Soothsayer model that you can place next to the table you can purchase the Soothsayer for 15 pts. If you don’t have a painted Soothsayer model you can still include it in your force but it will cost you 20 pts.",
+            "typeId": "cebc-13a4-3975-e3d3"
+          }
+        ]
+      },
+      {
+        "name": "Tsukaiban - messenger",
+        "id": "0737-012f-368f-7ed9",
+        "hidden": false,
+        "page": 65,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "056e-b720-1c74-8ce4",
+        "typeName": "Warband options",
+        "characteristics": [
+          {
+            "name": "Rules",
+            "$text": "If the army list allows it, you may include up to one Tsukaiban per each level 4 or level 5 character in your force. The Tsukaiban follows the rules presented earlier in this supplement.",
+            "typeId": "cebc-13a4-3975-e3d3"
+          }
+        ]
+      },
+      {
+        "name": "Standard Bearer",
+        "id": "0f4e-c1f9-d6e1-5f8d",
+        "hidden": false,
+        "page": 65,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "056e-b720-1c74-8ce4",
+        "typeName": "Warband options",
+        "characteristics": [
+          {
+            "name": "Rules",
+            "$text": "You can attach a standard bearer to a character, this could be a Nobori or a Jirushi.\n The model remains in base-to-base contact with the character at all times. If a character with an attached standard bearer attempts to rally a unit within command range the player may re-roll any dice that failed to recover fatigue in the attempt.\n The standard bearer is never targeted, nor can they fight, and is removed if the character model is eliminated from the game without any additional effect.",
+            "typeId": "cebc-13a4-3975-e3d3"
+          }
+        ]
+      },
+      {
+        "name": "Sake rations",
+        "id": "860c-f4fc-a510-1f16",
+        "hidden": false,
+        "page": 66,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "056e-b720-1c74-8ce4",
+        "typeName": "Warband options",
+        "characteristics": [
+          {
+            "name": "Rules",
+            "$text": "If the army list allows it, an enterprising warlord might choose to make sake rations available to their warriors to better predispose them before giving a Rousing Speech.\n If you purchase sake rations for your force you may re-roll the result when attempting to give a Rousing Speech.",
+            "typeId": "cebc-13a4-3975-e3d3"
+          }
+        ]
+      },
+      {
+        "name": "Hand Weapon",
+        "id": "da61-d14e-1496-e15e",
+        "hidden": false,
+        "page": 15,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "dca2-054b-5a27-c598",
+        "typeName": "Melee Weapons",
+        "characteristics": [
+          {"name": "Weapon", "$text": "Hand Weapon", "typeId": "db42-8f31-a03b-7cab"},
+          {"name": "Initiative", "$text": "1", "typeId": "7036-dc17-324f-3679"},
+          {"name": "Save Mod", "$text": "-", "typeId": "96e1-2b1f-4ace-7365"},
+          {"name": "Notes", "$text": "-", "typeId": "c8a2-5e66-da06-7058"}
+        ]
+      },
+      {
+        "name": "Mixed Weapons",
+        "id": "0c5a-102a-b76c-8eff",
+        "hidden": false,
+        "page": 15,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "dca2-054b-5a27-c598",
+        "typeName": "Melee Weapons",
+        "characteristics": [
+          {"name": "Weapon", "$text": "Mixed Weapons", "typeId": "db42-8f31-a03b-7cab"},
+          {"name": "Initiative", "$text": "2", "typeId": "7036-dc17-324f-3679"},
+          {"name": "Save Mod", "$text": "-", "typeId": "96e1-2b1f-4ace-7365"},
+          {"name": "Notes", "$text": "-", "typeId": "c8a2-5e66-da06-7058"}
+        ]
+      },
+      {
+        "name": "Polearms",
+        "id": "c2cb-63bc-d78b-a2b1",
+        "hidden": false,
+        "page": 17,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "dca2-054b-5a27-c598",
+        "typeName": "Melee Weapons",
+        "characteristics": [
+          {"name": "Weapon", "$text": "Polearms", "typeId": "db42-8f31-a03b-7cab"},
+          {"name": "Initiative", "$text": "2", "typeId": "7036-dc17-324f-3679"},
+          {"name": "Save Mod", "$text": "-1", "typeId": "96e1-2b1f-4ace-7365"},
+          {"name": "Notes", "$text": "May not use shield", "typeId": "c8a2-5e66-da06-7058"}
+        ]
+      },
+      {
+        "name": "Thrusting Spear",
+        "id": "66be-7f44-d755-1ec3",
+        "hidden": false,
+        "page": 16,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "dca2-054b-5a27-c598",
+        "typeName": "Melee Weapons",
+        "characteristics": [
+          {"name": "Weapon", "$text": "Thrusting Spear", "typeId": "db42-8f31-a03b-7cab"},
+          {"name": "Initiative", "$text": "3", "typeId": "7036-dc17-324f-3679"},
+          {"name": "Save Mod", "$text": "-", "typeId": "96e1-2b1f-4ace-7365"},
+          {"name": "Notes", "$text": "-", "typeId": "c8a2-5e66-da06-7058"}
+        ]
+      },
+      {
+        "name": "Cavalry Long Spear",
+        "id": "b0ae-dca4-0b2a-d4dc",
+        "hidden": false,
+        "page": 16,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "dca2-054b-5a27-c598",
+        "typeName": "Melee Weapons",
+        "characteristics": [
+          {"name": "Weapon", "$text": "Cavalry Long Spear", "typeId": "db42-8f31-a03b-7cab"},
+          {"name": "Initiative", "$text": "3", "typeId": "7036-dc17-324f-3679"},
+          {"name": "Save Mod", "$text": "-", "typeId": "96e1-2b1f-4ace-7365"},
+          {"name": "Notes", "$text": "May not use shield", "typeId": "c8a2-5e66-da06-7058"}
+        ]
+      },
+      {
+        "name": "Pike",
+        "id": "bdf8-dfbe-951f-1263",
+        "hidden": false,
+        "page": 17,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "dca2-054b-5a27-c598",
+        "typeName": "Melee Weapons",
+        "characteristics": [
+          {"name": "Weapon", "$text": "Pike", "typeId": "db42-8f31-a03b-7cab"},
+          {"name": "Initiative", "$text": "4", "typeId": "7036-dc17-324f-3679"},
+          {"name": "Save Mod", "$text": "-", "typeId": "96e1-2b1f-4ace-7365"},
+          {"name": "Notes", "$text": "May not use shield, counts as hand weapon in loose order", "typeId": "c8a2-5e66-da06-7058"}
+        ]
+      },
+      {
+        "name": "Heavy Weapons",
+        "id": "36c9-efdd-16d9-dfab",
+        "hidden": false,
+        "page": 16,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "dca2-054b-5a27-c598",
+        "typeName": "Melee Weapons",
+        "characteristics": [
+          {"name": "Weapon", "$text": "Heavy Weapons", "typeId": "db42-8f31-a03b-7cab"},
+          {"name": "Initiative", "$text": "1", "typeId": "7036-dc17-324f-3679"},
+          {"name": "Save Mod", "$text": "-2", "typeId": "96e1-2b1f-4ace-7365"},
+          {"name": "Notes", "$text": "May not use shield", "typeId": "c8a2-5e66-da06-7058"}
+        ]
+      },
+      {
+        "name": "Additional Hand Weapon",
+        "id": "9e3b-20df-bebe-411a",
+        "hidden": false,
+        "page": 15,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "dca2-054b-5a27-c598",
+        "typeName": "Melee Weapons",
+        "characteristics": [
+          {"name": "Weapon", "$text": "Additional Hand Weapon", "typeId": "db42-8f31-a03b-7cab"},
+          {"name": "Initiative", "$text": "1", "typeId": "7036-dc17-324f-3679"},
+          {"name": "Save Mod", "$text": "-", "typeId": "96e1-2b1f-4ace-7365"},
+          {"name": "Notes", "$text": "May not use shield", "typeId": "c8a2-5e66-da06-7058"}
+        ]
+      },
+      {
+        "name": "War Bow (Mounted)",
+        "id": "6fc3-97cc-b28b-5b93",
+        "hidden": false,
+        "page": 18,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "3b23-2b3e-2aa1-7894",
+        "typeName": "Missile Weapons",
+        "characteristics": [
+          {"name": "Missile Weapon", "$text": "War Bow (Mounted)", "typeId": "f27b-abc8-6cdc-6051"},
+          {"name": "Range (Close/Long)", "$text": "8”/16”", "typeId": "3aaa-036d-a3bd-7c93"},
+          {"name": "Save Mod", "$text": "0 up to 2”, then +1", "typeId": "6e5f-ed78-bd16-3f84"},
+          {"name": "Notes", "$text": "Mounted shooting", "typeId": "e6a0-9cba-d6ab-891e"}
+        ]
+      },
+      {
+        "name": "Sling",
+        "id": "248a-8a7b-d0d5-91bc",
+        "hidden": false,
+        "page": 19,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "3b23-2b3e-2aa1-7894",
+        "typeName": "Missile Weapons",
+        "characteristics": [
+          {"name": "Missile Weapon", "$text": "Sling", "typeId": "f27b-abc8-6cdc-6051"},
+          {"name": "Range (Close/Long)", "$text": "8”/12”", "typeId": "3aaa-036d-a3bd-7c93"},
+          {"name": "Save Mod", "$text": "0 up to 4”, then +1", "typeId": "6e5f-ed78-bd16-3f84"},
+          {"name": "Notes", "$text": "Shoot", "typeId": "e6a0-9cba-d6ab-891e"}
+        ]
+      },
+      {
+        "name": "Bow",
+        "id": "1abc-1d66-d92b-1573",
+        "hidden": false,
+        "page": 19,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "3b23-2b3e-2aa1-7894",
+        "typeName": "Missile Weapons",
+        "characteristics": [
+          {"name": "Missile Weapon", "$text": "Bow", "typeId": "f27b-abc8-6cdc-6051"},
+          {"name": "Range (Close/Long)", "$text": "4”/16”", "typeId": "3aaa-036d-a3bd-7c93"},
+          {"name": "Save Mod", "$text": "+1", "typeId": "6e5f-ed78-bd16-3f84"},
+          {"name": "Notes", "$text": "Shoot", "typeId": "e6a0-9cba-d6ab-891e"}
+        ]
+      },
+      {
+        "name": "Arquebus",
+        "id": "7edd-9692-e7cc-2347",
+        "hidden": false,
+        "page": 20,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "3b23-2b3e-2aa1-7894",
+        "typeName": "Missile Weapons",
+        "characteristics": [
+          {"name": "Missile Weapon", "$text": "Arquebus", "typeId": "f27b-abc8-6cdc-6051"},
+          {"name": "Range (Close/Long)", "$text": "8”/16”", "typeId": "3aaa-036d-a3bd-7c93"},
+          {"name": "Save Mod", "$text": "-1 up to 8”, then 0", "typeId": "6e5f-ed78-bd16-3f84"},
+          {"name": "Notes", "$text": "Shoot(+0), Reload(2)", "typeId": "e6a0-9cba-d6ab-891e"}
+        ]
+      },
+      {
+        "name": "Crossbow",
+        "id": "45ba-5669-c259-4411",
+        "hidden": false,
+        "page": 19,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "3b23-2b3e-2aa1-7894",
+        "typeName": "Missile Weapons",
+        "characteristics": [
+          {"name": "Missile Weapon", "$text": "Crossbow", "typeId": "f27b-abc8-6cdc-6051"},
+          {"name": "Range (Close/Long)", "$text": "8”/16”", "typeId": "3aaa-036d-a3bd-7c93"},
+          {"name": "Save Mod", "$text": "0 up to 6”, then +1", "typeId": "6e5f-ed78-bd16-3f84"},
+          {"name": "Notes", "$text": "Shoot(+0), Reload(1)", "typeId": "e6a0-9cba-d6ab-891e"}
+        ]
+      },
+      {
+        "name": "Repeating Crossbow",
+        "id": "630e-d003-26f0-ce95",
+        "hidden": false,
+        "page": 20,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "3b23-2b3e-2aa1-7894",
+        "typeName": "Missile Weapons",
+        "characteristics": [
+          {"name": "Missile Weapon", "$text": "Repeating Crossbow", "typeId": "f27b-abc8-6cdc-6051"},
+          {"name": "Range (Close/Long)", "$text": "6”/10”", "typeId": "3aaa-036d-a3bd-7c93"},
+          {"name": "Save Mod", "$text": "+1", "typeId": "6e5f-ed78-bd16-3f84"},
+          {"name": "Notes", "$text": "Shoot(+0), Reload special", "typeId": "e6a0-9cba-d6ab-891e"}
+        ]
+      },
+      {
+        "name": "Early Firearms",
+        "id": "3f74-afc7-5ae5-36ea",
+        "hidden": false,
+        "page": 21,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "3b23-2b3e-2aa1-7894",
+        "typeName": "Missile Weapons",
+        "characteristics": [
+          {"name": "Missile Weapon", "$text": "Early Firearms", "typeId": "f27b-abc8-6cdc-6051"},
+          {"name": "Range (Close/Long)", "$text": "8”/12”", "typeId": "3aaa-036d-a3bd-7c93"},
+          {"name": "Save Mod", "$text": "-1 up to 6”, then 0", "typeId": "6e5f-ed78-bd16-3f84"},
+          {"name": "Notes", "$text": "Shoot(+0), Reload(2)", "typeId": "e6a0-9cba-d6ab-891e"}
+        ]
+      },
+      {
+        "name": "Grenades",
+        "id": "ee62-71d5-d213-f75a",
+        "hidden": false,
+        "page": 21,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "3b23-2b3e-2aa1-7894",
+        "typeName": "Missile Weapons",
+        "characteristics": [
+          {"name": "Missile Weapon", "$text": "Grenades", "typeId": "f27b-abc8-6cdc-6051"},
+          {"name": "Range (Close/Long)", "$text": "6”/-", "typeId": "3aaa-036d-a3bd-7c93"},
+          {"name": "Save Mod", "$text": "-1", "typeId": "6e5f-ed78-bd16-3f84"},
+          {"name": "Notes", "$text": "Shoot, Special to-hit table", "typeId": "e6a0-9cba-d6ab-891e"}
+        ]
+      },
+      {
+        "name": "War Bow",
+        "id": "f586-85ee-c329-5239",
+        "hidden": false,
+        "page": 18,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "typeId": "3b23-2b3e-2aa1-7894",
+        "typeName": "Missile Weapons",
+        "characteristics": [
+          {"name": "Missile Weapon", "$text": "War Bow", "typeId": "f27b-abc8-6cdc-6051"},
+          {"name": "Range (Close/Long)", "$text": "8”/20”", "typeId": "3aaa-036d-a3bd-7c93"},
+          {"name": "Save Mod", "$text": "0 up to 4”, then +1", "typeId": "6e5f-ed78-bd16-3f84"},
+          {"name": "Notes", "$text": "Shoot", "typeId": "e6a0-9cba-d6ab-891e"}
+        ]
+      }
+    ],
+    "sharedRules": [
+      {
+        "name": "Musicians",
+        "id": "9e3d-8d20-5c26-4f45",
+        "description": "See Clash of Katanas page 65",
+        "hidden": false,
+        "page": 65,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Ashigaru Drill",
+        "id": "e858-ddd4-90c8-d71c",
+        "description": "(affects Pike rules and form close order action)\n\nSee Clash of Katanas page 25",
+        "hidden": false,
+        "page": 25,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Bushmaster",
+        "id": "cdd3-6f40-2c09-f2be",
+        "description": "(affects morale and saves in high terrain)\n\n\nSee Clash of Katanas page 25",
+        "hidden": false,
+        "page": 25,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Charge",
+        "id": "cc06-d370-985b-b9e8",
+        "description": "(requires Attack action in loose order armed with cavalry long spear, affects  Attack mechanics, enemy saving throw and morale)\n\nSee Clash of Katanas page 26",
+        "hidden": false,
+        "page": 26,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Combined Arms",
+        "id": "4819-db9b-6f59-4d46",
+        "description": "(requires Attack action and mixed weapons, affects to-hit rolls)\n\nSee Clash of Katanas page 26",
+        "hidden": false,
+        "page": 26,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Deadly Strike",
+        "id": "ff67-0589-a472-9a59",
+        "description": "(affects enemy combat response)\n\nSee Clash of Katanas page 26",
+        "hidden": false,
+        "page": 26,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Extra Equipment (X)",
+        "id": "70f5-69fc-f349-3df4",
+        "description": "(affects equipment usage)\n\nSee Clash of Katanas page 26",
+        "hidden": false,
+        "page": 26,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Extended Nagae-Yari",
+        "id": "afa1-3c4b-a5af-e4ac",
+        "description": "(requires pike)\n\nSee Clash of Katanas page 27",
+        "hidden": false,
+        "page": 27,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Form Up!",
+        "id": "fd1f-2bdc-07d2-b1e2",
+        "description": "(requires mounted)\n\nSee Clash of Katanas page 27",
+        "hidden": false,
+        "page": 27,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Furikaeshi",
+        "id": "f8a4-593f-e7ef-3596",
+        "description": "(naginata defensive technique, requires defend & loose order while not in high area terrain, affects defend mechanics)\n\nSee Clash of Katanas page 27",
+        "hidden": false,
+        "page": 27,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Guerrilla",
+        "id": "49c9-f4ad-cd1c-843a",
+        "description": "(requires loose order, affects enemy morale)\n\nSee Clash of Katanas page 28",
+        "hidden": false,
+        "page": 28,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Gushing Wounds",
+        "id": "4b1e-a038-9ab8-18e5",
+        "description": "(requires all-out attack and double handed weapon, enemy morale)\n\nSee Clash of Katanas page 28",
+        "hidden": false,
+        "page": 28,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Harinezumi",
+        "id": "7e14-85d7-9425-fd62",
+        "description": "(requires counter attack in close order and Pike, affects counter-attack mechanics)\n\nSee Clash of Katanas page 29",
+        "hidden": false,
+        "page": 29,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Heavy Strike",
+        "id": "55cb-be7a-e2ae-eb7f",
+        "description": "(Requires heavy weapons)\n\nSee Clash of Katanas page 29",
+        "hidden": false,
+        "page": 29,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Kuridashi",
+        "id": "de26-4407-1e5c-9333",
+        "description": "(naginata offensive technique, requires Attack action in loose order while not in high area terrain and affects enemy counter-attack)\n\nSee Clash of Katanas page 29",
+        "hidden": false,
+        "page": 29,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Mandarin Duck",
+        "id": "ca48-a294-edfa-38d5",
+        "description": "(affects reaction)\n\nSee Clash of Katanas page 30",
+        "hidden": false,
+        "page": 30,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Massed Charge",
+        "id": "c82e-f5db-a33e-78dc",
+        "description": "(requires Attack action in close order armed with cavalry long spear, affects Attack)\n\nSee Clash of Katanas page 31",
+        "hidden": false,
+        "page": 31,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Momentum",
+        "id": "77c2-4c9c-11ce-230f",
+        "description": "(requires polearms in open terrain, affects enemy on defend response and saving throw)\n\nSee Clash of Katanas page 32",
+        "hidden": false,
+        "page": 32,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Mounted",
+        "id": "d9d2-3558-9345-f859",
+        "description": "(affects various)\n\nSee Clash of Katanas page 32",
+        "hidden": false,
+        "page": 32,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Mounted gunnery",
+        "id": "6031-3bdb-cb86-4483",
+        "description": "(requires mounted and arquebus/early firearms)\n\nSee Clash of Katanas page 33",
+        "hidden": false,
+        "page": 33,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Norikuzishi",
+        "id": "4ac0-4eb1-e7c2-22b7",
+        "description": "(requires mounted, close order and cavalry long spear and affects attack)\n\nSee Clash of Katanas page 33",
+        "hidden": false,
+        "page": 33,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Off Hand Parry",
+        "id": "9ef1-040d-9c12-0031",
+        "description": "(requires defend in loose order and off-hand weapon or shield, affects defend rolls)\n\nSee Clash of Katanas page 33",
+        "hidden": false,
+        "page": 33,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Overwhelm",
+        "id": "9f7f-4042-6f70-1f74",
+        "description": "(requires Attack in loose order from a distance of 2” or less, affects to-hit and enemy morale)\n\nSee Clash of Katanas page 33",
+        "hidden": false,
+        "page": 33,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Overhead Shot",
+        "id": "31e4-e1bb-1891-6660",
+        "description": "(requires missile weapons and close order, affects Shoot action mechanics)\n\nSee Clash of Katanas page 33",
+        "hidden": false,
+        "page": 33,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Parry Riposte",
+        "id": "75a1-70dd-efce-46c3",
+        "description": "(requires loose order against enemy in loose order, affects defend)\n\nSee Clash of Katanas page 33",
+        "hidden": false,
+        "page": 33,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Rain of Blows",
+        "id": "f882-da72-3763-a998",
+        "description": "(requires loose order against enemy in loose order, affects defend)\n\nSee Clash of Katanas page 34",
+        "hidden": false,
+        "page": 34,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Rotational Fire",
+        "id": "50ed-7ab9-239e-3d86",
+        "description": "(requires close order and Teppo, affects unloaded counters)\n\nSee Clash of Katanas page 34",
+        "hidden": false,
+        "page": 34,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Shields up!",
+        "id": "8670-12b3-d513-9f8f",
+        "description": "(requires unit not in high area terrain)\n\nSee Clash of Katanas page 35",
+        "hidden": false,
+        "page": 35,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Skirmish Specialist",
+        "id": "ff43-1aaa-9706-7d3a",
+        "description": "(requires loose order, affects save, grit, reaction)\n\nSee Clash of Katanas page 35",
+        "hidden": false,
+        "page": 35,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Sharpshooter",
+        "id": "b987-88fe-a8d2-f0c6",
+        "description": "(requires missile weapon, affects shoot action)\n\nSee Clash of Katanas page 35",
+        "hidden": false,
+        "page": 35,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Tate Specialist",
+        "id": "5f2b-ec66-2241-0d2e",
+        "description": "(requires pavise and affects morale)\n\nSee Clash of Katanas page 36",
+        "hidden": false,
+        "page": 36,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Uteya",
+        "id": "5d66-524d-6472-68ed",
+        "description": "(requires Attack action in loose order in the open and any type of infantry spear or pike, affects enemy counter attack)\n\nSee Clash of Katanas page 36",
+        "hidden": false,
+        "page": 36,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Volley",
+        "id": "1368-1e12-4bdb-b5bd",
+        "description": "(requires close order and Arquebus, affects enemy morale)\n\nSee Clash of Katanas page 36",
+        "hidden": false,
+        "page": 36,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Wall of Spears",
+        "id": "88fd-c9d2-881a-514d",
+        "description": "(requires close order affects hold)\n\nSee Clash of Katanas page 37",
+        "hidden": false,
+        "page": 37,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Yoji-gakure",
+        "id": "f3fe-ae4f-2bcd-a174",
+        "description": "(affects enemy combat response)\n\nSee Clash of Katanas page 37",
+        "hidden": false,
+        "page": 37,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Allies",
+        "id": "cca7-e2ea-861f-ddca",
+        "description": "(affects enemy combat response)\n\nSee Clash of Katanas page 40",
+        "hidden": false,
+        "page": 40,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Brotherhood",
+        "id": "db7b-1978-8120-333d",
+        "description": "(affects morale)\n\nSee Clash of Katanas page 40",
+        "hidden": false,
+        "page": 40,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Sisterhood",
+        "id": "b9ba-f175-2fad-7c41",
+        "description": "(affects morale)\n\nSee Clash of Katanas page 40",
+        "hidden": false,
+        "page": 40,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Determined",
+        "id": "c574-93df-8bc6-d416",
+        "description": "(affects grit tests)\n\nSee Clash of Katanas page 41",
+        "hidden": false,
+        "page": 41,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Duty-bound",
+        "id": "c6ac-ca22-0749-4553",
+        "description": "(affects morale)\n\nSee Clash of Katanas page 41",
+        "hidden": false,
+        "page": 41,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Fickle",
+        "id": "1190-102e-e4df-9de0",
+        "description": "(affects break test results)\n\nSee Clash of Katanas page 41",
+        "hidden": false,
+        "page": 41,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Furor",
+        "id": "153a-1158-023f-e4de",
+        "description": "(requires loose order, affects All-Out Attack)\n\nSee Clash of Katanas page 42",
+        "hidden": false,
+        "page": 42,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Honorable",
+        "id": "248c-5a38-ff9b-1443",
+        "description": "(affects morale test and fatigue effects)\n\nSee Clash of Katanas page 42",
+        "hidden": false,
+        "page": 42,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Independent",
+        "id": "2a20-ecb8-768c-0fb6",
+        "description": "(affects activation mechanics)\n\nSee Clash of Katanas page 42",
+        "hidden": false,
+        "page": 42,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Iron Will",
+        "id": "8f05-7fdf-356d-8fd2",
+        "description": "(affects fatigue effect)\n\nSee Clash of Katanas page 42",
+        "hidden": false,
+        "page": 42,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Ruthless",
+        "id": "3855-107b-6eda-0362",
+        "description": "(requires all-out attack, affects saving throw)\n\nSee Clash of Katanas page 43",
+        "hidden": false,
+        "page": 43,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "The Old Ways",
+        "id": "580d-9ae4-403e-9ac7",
+        "description": "(affects morale break points)\n\nSee Clash of Katanas page 43",
+        "hidden": false,
+        "page": 43,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Attacks (X)",
+        "id": "3be6-4f1f-62a0-9bf1",
+        "description": "(Affects attacks)\n\nSee Clash of Katanas page 43",
+        "hidden": false,
+        "page": 43,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Wounds (X)",
+        "id": "07c6-cfbe-cdcd-4215",
+        "description": "(Affects wounds)\n\nSee Clash of Katanas page 43",
+        "hidden": false,
+        "page": 43,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Light Cannon",
+        "id": "c2d2-671c-5c71-431c",
+        "description": "See Clash of Katanas page 45",
+        "hidden": false,
+        "page": 45,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Hwacha",
+        "id": "9482-fece-6783-48b1",
+        "description": "See Clash of Katanas page 48",
+        "hidden": false,
+        "page": 48,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Aimed Shot",
+        "id": "3f79-6883-5073-9546",
+        "description": "(loose order, affects shooting)\n\nSee Clash of Katanas page 25",
+        "hidden": false,
+        "page": 25,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      },
+      {
+        "name": "Pavises",
+        "id": "76c4-88ea-3c72-aabc",
+        "description": "(1 armor point against missile attacks when deployed)\n\nSee Clash of Katanas page 24",
+        "hidden": false,
+        "page": 24,
+        "publicationId": "2b66-a6af-f775-7e3a"
+      }
+    ],
+    "sharedSelectionEntryGroups": [
+      {
+        "name": "Non Samurai Leader Armor options",
+        "id": "0cbb-682a-674f-33d4",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 63,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "categoryLinks": [
+          {"name": "Iga/koga", "id": "7f94-c688-0276-16d8", "hidden": false, "primary": false, "targetId": "2b85-e441-49d0-278e"},
+          {"name": "Ikko Ikki", "id": "88b7-0f17-988a-e32f", "hidden": false, "primary": false, "targetId": "fef9-fdfd-9f8e-a258"},
+          {"name": "Joseon Koreans", "id": "ab36-e927-f0e3-b1ef", "hidden": false, "primary": false, "targetId": "838a-cc16-6847-295f"},
+          {"name": "Ming Chinese", "id": "61c8-cb67-c93a-740b", "hidden": false, "primary": false, "targetId": "c7fa-04f7-3ee6-1c44"},
+          {"name": "Wako/Bandits", "id": "a4c9-70d4-06b0-21ad", "hidden": false, "primary": false, "targetId": "2f5e-92c6-adb0-749f"},
+          {"name": "Otomo", "id": "1ad4-2b6d-e21d-8ab9", "hidden": false, "primary": false, "targetId": "4e6d-dd8e-3a37-4bcb"}
+        ],
+        "constraints": [
+          {
+            "id": "6120-37da-be67-d222",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          },
+          {
+            "id": "7827-23d4-5475-d2ca",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Remove armor",
+            "id": "f019-09da-8693-ef4b",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "page": 64,
+            "publicationId": "c456-f76c-b3d1-a04e",
+            "type": "upgrade",
+            "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": -3}]
+          },
+          {
+            "name": "Upgrade to enclosed armor",
+            "id": "f9e5-eca0-9f15-6ade",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "page": 64,
+            "publicationId": "2b66-a6af-f775-7e3a",
+            "type": "upgrade",
+            "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": 2}]
+          },
+          {
+            "name": "Downgrade to partial armor",
+            "id": "8c06-0d2c-a07c-166e",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "page": 64,
+            "publicationId": "2b66-a6af-f775-7e3a",
+            "type": "upgrade",
+            "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": -1}]
+          },
+          {
+            "name": "Make armor improved",
+            "id": "5d67-f1b3-cc8e-8a18",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "page": 64,
+            "publicationId": "c456-f76c-b3d1-a04e",
+            "type": "upgrade",
+            "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": 1}]
+          }
+        ]
+      },
+      {
+        "name": "Samurai Leader Armor options",
+        "id": "0c04-36d6-6e18-fcf1",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 63,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "categoryLinks": [
+          {"name": "Chosokabe", "id": "c32f-c0b7-f1b2-bfff", "hidden": false, "primary": false, "targetId": "6968-97b8-bc7d-a7c6"},
+          {"name": "Hojo", "id": "8dfe-9e93-a061-1396", "hidden": false, "primary": false, "targetId": "10b1-5423-9fac-54b5"},
+          {"name": "Date", "id": "93cf-1f13-d794-4fb0", "hidden": false, "primary": false, "targetId": "f198-4f30-7166-94c1"},
+          {"name": "Mori", "id": "8feb-13ee-96d5-9403", "hidden": false, "primary": false, "targetId": "f8f8-691b-9a3c-e34b"},
+          {"name": "Oda/Toyotomi/Tokugawa", "id": "34aa-3a4d-5be6-ddff", "hidden": false, "primary": false, "targetId": "4480-021a-ce5b-6e73"},
+          {"name": "Shimazu", "id": "e4a7-ded0-c2d9-39a8", "hidden": false, "primary": false, "targetId": "1a08-f459-a1e6-b8ed"},
+          {"name": "Takeda", "id": "efdb-bf60-4a4b-5d3a", "hidden": false, "primary": false, "targetId": "7d5b-a60d-87eb-792d"},
+          {"name": "Uesugi", "id": "c4ee-fb8e-86a5-d910", "hidden": false, "primary": false, "targetId": "e17d-3c6b-c085-7ffe"}
+        ],
+        "constraints": [
+          {
+            "id": "416e-797a-1e1a-26c0",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          },
+          {
+            "id": "49c8-53d4-fcc1-a37d",
+            "field": "selections",
+            "includeChildForces": false,
+            "includeChildSelections": false,
+            "percentValue": false,
+            "scope": "parent",
+            "shared": true,
+            "type": "min",
+            "value": 0
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Remove armor",
+            "id": "d531-8f54-e311-3657",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "page": 63,
+            "publicationId": "c456-f76c-b3d1-a04e",
+            "type": "upgrade",
+            "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": -5}]
+          },
+          {
+            "name": "Downgrade to partial armor",
+            "id": "0992-89b9-f42f-e7a5",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "page": 63,
+            "publicationId": "2b66-a6af-f775-7e3a",
+            "type": "upgrade",
+            "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": -3}]
+          },
+          {
+            "name": "Downgrade to full armor",
+            "id": "24a1-0084-f315-bb19",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "page": 63,
+            "publicationId": "2b66-a6af-f775-7e3a",
+            "type": "upgrade",
+            "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": -2}]
+          },
+          {
+            "name": "Make armor improved",
+            "id": "1814-2c26-1e13-9eaa",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "page": 63,
+            "publicationId": "c456-f76c-b3d1-a04e",
+            "type": "upgrade",
+            "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": 1}]
+          }
+        ]
+      },
+      {
+        "name": "Weapon and trait options",
+        "id": "6ea7-8a36-dc65-25ff",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 64,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "selectionEntryGroups": [
+          {
+            "name": "Melee",
+            "id": "13b2-c733-518e-f6ea",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "categoryLinks": [{"name": "Melee", "id": "9630-5f7b-29c0-a504", "hidden": false, "primary": false, "targetId": "c876-e1df-1054-409d"}],
+            "selectionEntries": [
+              {
+                "name": "Polearm",
+                "id": "5113-3683-ddfc-ecc6",
+                "collective": true,
+                "hidden": false,
+                "import": true,
+                "page": 64,
+                "publicationId": "2b66-a6af-f775-7e3a",
+                "type": "upgrade",
+                "categoryLinks": [{"name": "Melee", "id": "c554-ca70-550d-05e0", "hidden": false, "primary": false, "targetId": "c876-e1df-1054-409d"}],
+                "constraints": [
+                  {
+                    "id": "1f59-8775-c087-b0a5",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": 2}],
+                "modifiers": [
+                  {
+                    "field": "1f59-8775-c087-b0a5",
+                    "type": "set",
+                    "value": 0,
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "childId": "5f44-e3b3-db99-3b76",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 1
+                          },
+                          {
+                            "childId": "2108-cb7c-e1c1-6650",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 1
+                          },
+                          {
+                            "childId": "9f94-47c4-70c5-60ae",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 1
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Thrusting Spear becomes Cavalry Long Spear when mounted",
+                "id": "2108-cb7c-e1c1-6650",
+                "collective": true,
+                "hidden": false,
+                "import": true,
+                "page": 64,
+                "publicationId": "2b66-a6af-f775-7e3a",
+                "type": "upgrade",
+                "categoryLinks": [{"name": "Melee", "id": "7786-e52b-3386-2893", "hidden": false, "primary": false, "targetId": "c876-e1df-1054-409d"}],
+                "constraints": [
+                  {
+                    "id": "79da-e48c-875f-2822",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": 1}],
+                "modifiers": [
+                  {
+                    "field": "79da-e48c-875f-2822",
+                    "type": "set",
+                    "value": 0,
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "childId": "5f44-e3b3-db99-3b76",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 1
+                          },
+                          {
+                            "childId": "9f94-47c4-70c5-60ae",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 1
+                          },
+                          {
+                            "childId": "5113-3683-ddfc-ecc6",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 1
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Heavy weapon",
+                "id": "5f44-e3b3-db99-3b76",
+                "collective": true,
+                "hidden": false,
+                "import": true,
+                "page": 64,
+                "publicationId": "2b66-a6af-f775-7e3a",
+                "type": "upgrade",
+                "categoryLinks": [{"name": "Melee", "id": "f9fc-3901-9041-a541", "hidden": false, "primary": false, "targetId": "c876-e1df-1054-409d"}],
+                "constraints": [
+                  {
+                    "id": "fc30-4e95-d6cc-cf01",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": 2}],
+                "modifiers": [
+                  {
+                    "field": "fc30-4e95-d6cc-cf01",
+                    "type": "set",
+                    "value": 0,
+                    "conditions": [
+                      {
+                        "childId": "d659-d9c2-30f7-d264",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": true,
+                        "type": "equalTo",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "field": "fc30-4e95-d6cc-cf01",
+                    "type": "set",
+                    "value": 0,
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "childId": "9f94-47c4-70c5-60ae",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 1
+                          },
+                          {
+                            "childId": "2108-cb7c-e1c1-6650",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 1
+                          },
+                          {
+                            "childId": "5113-3683-ddfc-ecc6",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 1
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Additional hand weapon and off-hand parry trait",
+                "id": "9f94-47c4-70c5-60ae",
+                "collective": true,
+                "hidden": false,
+                "import": true,
+                "page": 64,
+                "publicationId": "2b66-a6af-f775-7e3a",
+                "type": "upgrade",
+                "categoryLinks": [{"name": "Melee", "id": "9919-e9ad-fe47-d614", "hidden": false, "primary": false, "targetId": "c876-e1df-1054-409d"}],
+                "constraints": [
+                  {
+                    "id": "bfc7-5b2c-7b73-4fbf",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": 1}],
+                "modifiers": [
+                  {
+                    "field": "bfc7-5b2c-7b73-4fbf",
+                    "type": "set",
+                    "value": 0,
+                    "conditionGroups": [
+                      {
+                        "type": "or",
+                        "conditions": [
+                          {
+                            "childId": "5f44-e3b3-db99-3b76",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 1
+                          },
+                          {
+                            "childId": "2108-cb7c-e1c1-6650",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 1
+                          },
+                          {
+                            "childId": "5113-3683-ddfc-ecc6",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 1
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Ranged",
+            "id": "f6b3-dd12-4ce2-2f3b",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "categoryLinks": [{"name": "Ranged", "id": "d9d1-1b96-eb1b-1801", "hidden": false, "primary": false, "targetId": "b96d-4daf-3387-6074"}],
+            "selectionEntries": [
+              {
+                "name": "Arquebus",
+                "id": "bd4d-5f5a-6ac1-2401",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "page": 64,
+                "publicationId": "2b66-a6af-f775-7e3a",
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "bba6-6a8d-3330-a223",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": 3}],
+                "modifiers": [
+                  {
+                    "field": "bba6-6a8d-3330-a223",
+                    "type": "set",
+                    "value": 0,
+                    "conditions": [
+                      {
+                        "childId": "56f0-be1a-bddf-f8f3",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": true,
+                        "type": "equalTo",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "War Bow",
+                "id": "56f0-be1a-bddf-f8f3",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "page": 64,
+                "publicationId": "2b66-a6af-f775-7e3a",
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "ecbc-0565-248a-5df5",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": 3}],
+                "modifiers": [
+                  {
+                    "field": "ecbc-0565-248a-5df5",
+                    "type": "set",
+                    "value": 0,
+                    "conditions": [
+                      {
+                        "childId": "bd4d-5f5a-6ac1-2401",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": true,
+                        "type": "equalTo",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Traits",
+            "id": "0f76-a99d-7046-9b19",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "selectionEntries": [
+              {
+                "name": "Extra Equipment(X)",
+                "id": "7c2e-4136-8684-07c7",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "page": 64,
+                "publicationId": "2b66-a6af-f775-7e3a",
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "a943-616c-7cfd-5ebc",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  },
+                  {
+                    "id": "917b-d25a-4ee4-2b67",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "min",
+                    "value": 0
+                  }
+                ],
+                "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": 1}],
+                "modifiers": [
+                  {
+                    "field": "917b-d25a-4ee4-2b67",
+                    "type": "set",
+                    "value": 1,
+                    "conditionGroups": [
+                      {
+                        "type": "and",
+                        "conditions": [
+                          {
+                            "childId": "b96d-4daf-3387-6074",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 1
+                          },
+                          {
+                            "childId": "c876-e1df-1054-409d",
+                            "field": "selections",
+                            "includeChildForces": false,
+                            "includeChildSelections": false,
+                            "percentValue": false,
+                            "scope": "parent",
+                            "shared": true,
+                            "type": "equalTo",
+                            "value": 1
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Mounted",
+                "id": "d659-d9c2-30f7-d264",
+                "collective": false,
+                "hidden": false,
+                "import": true,
+                "page": 64,
+                "publicationId": "2b66-a6af-f775-7e3a",
+                "type": "upgrade",
+                "constraints": [
+                  {
+                    "id": "9a92-8901-248e-c5bc",
+                    "field": "selections",
+                    "includeChildForces": false,
+                    "includeChildSelections": false,
+                    "percentValue": false,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "max",
+                    "value": 1
+                  }
+                ],
+                "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": 4}],
+                "modifiers": [
+                  {
+                    "field": "9a92-8901-248e-c5bc",
+                    "type": "set",
+                    "value": 0,
+                    "conditions": [
+                      {
+                        "childId": "5f44-e3b3-db99-3b76",
+                        "field": "selections",
+                        "includeChildForces": false,
+                        "includeChildSelections": false,
+                        "percentValue": false,
+                        "scope": "parent",
+                        "shared": true,
+                        "type": "equalTo",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Warband options",
+        "id": "aa55-64fd-0bd1-2038",
+        "collective": false,
+        "hidden": false,
+        "import": true,
+        "page": 65,
+        "publicationId": "2b66-a6af-f775-7e3a",
+        "categoryLinks": [{"name": "New CategoryLink", "id": "5d4e-0360-d231-1167", "hidden": false, "primary": false, "targetId": "83b5-9c2a-edca-7ebe"}],
+        "selectionEntries": [
+          {
+            "name": "Musicians",
+            "id": "ee30-2a61-5067-b230",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "categoryLinks": [{"name": "Warband options", "id": "1c2b-03a1-d63f-5dfb", "hidden": false, "primary": false, "targetId": "83b5-9c2a-edca-7ebe"}],
+            "constraints": [
+              {
+                "id": "77b2-d4b0-7bbb-992d",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": 15}],
+            "infoLinks": [{"name": "Musicians", "id": "6241-87e3-7f2c-e1ac", "hidden": false, "targetId": "4aca-ff26-6406-e6b3", "type": "profile"}]
+          },
+          {
+            "name": "Standard Bearer",
+            "id": "aeb0-0bd2-1a8d-c040",
+            "collective": false,
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "2b88-7081-deb8-6140",
+                "field": "selections",
+                "includeChildForces": false,
+                "includeChildSelections": false,
+                "percentValue": false,
+                "scope": "parent",
+                "shared": true,
+                "type": "max",
+                "value": 1
+              }
+            ],
+            "costs": [{"name": "PTS", "typeId": "b6a6-2192-6add-77b0", "value": 15}],
+            "infoLinks": [{"name": "Standard Bearer", "id": "3e25-e222-58bb-0093", "hidden": false, "targetId": "0f4e-c1f9-d6e1-5f8d", "type": "profile"}]
+          }
+        ]
+      }
+    ]
+  }
+}
